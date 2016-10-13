@@ -1,0 +1,41 @@
+) #include <stdio.h>
+#include <stdlib.h>
+
+void Array_Display();
+void Array_Even_Sum(); //Function Prototype
+
+	int arrday[20];
+void main(){
+
+
+	for(int i=0; i<20; i++)
+	arrday[i]=rand() % 35 + 15;
+
+	Array_Display();
+	 Array_Even_Sum(); //Function call 
+
+
+
+system("pause");
+}
+
+
+void Array_Display(){
+	printf("In Normal order\n");
+		for(int j=0; j<20; j++)
+		printf("%d ",arrday[j]);
+
+		printf("\nIn reverse order\n");
+		for(int j=19; j>=0; j--)
+		printf("%d ",arrday[j]);
+}
+
+
+void Array_Even_Sum(){
+	int sum=0;
+	printf("\nsum of array elements with even indexes\n");
+		for(int j=0; j<20; j+=2)
+			sum+=arrday[j];
+		printf("%d ",sum);
+}
+
